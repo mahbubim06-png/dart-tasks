@@ -1,0 +1,26 @@
+void main() {
+
+  Map<String, int> data = {
+    "A": 10,
+    "B": 20,
+    "C": 10,
+    "D": 30
+  };
+
+
+  Map<int, List<String>> result = {};
+
+
+  data.forEach((key, value) {
+
+    if (result.containsKey(value)) {
+      result[value]!.add(key);
+    } else {
+      result[value] = [key];
+    }
+
+  });
+
+
+  print(result);
+}
